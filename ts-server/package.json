@@ -1,13 +1,13 @@
 {
-  "name": "parking-server",
+  "name": "portfolio-server",
   "version": "1.0.0",
-  "description": "parking server",
+  "description": "portfolio server",
   "main": "app.ts",
   "scripts": {
     "build": "tsc",
     "debug": "nodemon",
     "start": "ts-node src/app.ts",
-    "pkg-win": "tsc && pkg ./ -t node14-win-x64 --output ./bin/tpms.exe"
+    "pkg-win": "tsc && pkg ./ -t node14-win-x64 --output ./bin/portfolio.exe"
   },
   "author": "",
   "license": "ISC",
@@ -37,5 +37,7 @@
     "@types/winston": "^2.4.4",
     "pkg": "^5.4.1"
   },
-  "bin": "./dist/app.js"
+  "bin": {
+    "portfolio-server": "dist/app.js"
+  }
 }
