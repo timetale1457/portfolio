@@ -1,12 +1,15 @@
 {
-  "compilerOptions": {    
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "sourceMap": true,
-    "resolveJsonModule": true
-  },
-  "include": [
-    "./src/**/*.ts"
-  ]
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "target": "es2016",                        // 지원하는 자바스크립트 버전 설정
+    "module": "commonjs",                      // CommonJS 모듈 시스템을 사용 (node default setting)
+    "esModuleInterop": true,                   // 모듈중 CommonJS 모듈을 ES모듈처럼 동작하게 만들고 import 시 코드를 일관성있게 작성 할 수 있게 함.
+    "forceConsistentCasingInFileNames": true,  // import 시 파일의 대소문자 구분
+    "strict": true,                            // 프로젝트의 코드 타입검사 강화
+    "skipLibCheck": true,                      // 외부 라이브러리의 타입체크 비활성화 라이브러리간의 타입충돌 방지
+    "sourceMap": true,                         // 파일된 JavaScript 코드와 원본 TypeScript 코드 간의 매핑을 지원합니다. 소스 맵이 있으면 디버깅 중에 원본 TypeScript 코드를 볼 수 있음
+    "removeComments": true,                    // 생성된 자바스크립트 코드에서 주석 제거
+    "noImplicitAny": true,                     // 암시적인 any 타입 사용을 금지하고, 코드에 타입이 명시되지 않은 변수나 매개변수가 있을 경우 컴파일 오류를 발생
+    "outDir": "./dist",                        // 생성되는 자바스크립트 코드 경로
+  }
 }
