@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import stackTrace from 'stack-trace';
 import path from 'path';
 import 'source-map-support/register';  // source-map-support를 로드하여 소스 맵 지원
+import moment from 'moment'
 
 dotenv.config();
 
@@ -29,6 +30,9 @@ const formatCallerInfo = () => {
     return `${fileName}:${lineNumber} (${functionName})`;
 };
 
+// 커스텀 타임스탬프 포맷팅
+const customTimestampFormat = () => moment().format('YYYY-MM-DD HH:mm:ss');
+
 const dailyRotateFileTransport = new winston.transports.DailyRotateFile({
     filename: `logs/%DATE%_${PROJECT_NAME}.log`,
     datePattern: 'YYYY_MM_DD',
@@ -40,7 +44,7 @@ const dailyRotateFileTransport = new winston.transports.DailyRotateFile({
 const logger = winston.createLogger({
     level: LOG_LEVEL,
     format: winston.format.combine(
-        winston.format.timestamp(),
+        winston.format.timestamp({ format: customTimestampFormat }), // 커스텀 타임스탬프 포맷팅 적용
         winston.format.printf(({ level, message, timestamp }) => {
             const callerInfo = formatCallerInfo();
             return `${timestamp} [${level}] ${callerInfo} - ${message}`;
@@ -48,7 +52,10 @@ const logger = winston.createLogger({
     ),
     transports: [
         new winston.transports.Console({
-            format: winston.format.simple()
+            format: winston.format.combine(
+                winston.format.timestamp({ format: customTimestampFormat }),
+                winston.format.simple()
+            )
         }),
         dailyRotateFileTransport
     ],
