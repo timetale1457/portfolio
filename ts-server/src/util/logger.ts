@@ -52,9 +52,14 @@ const logger = winston.createLogger({
     ),
     transports: [
         new winston.transports.Console({
+            level: 'debug',
             format: winston.format.combine(
+                winston.format.colorize(), // 콘솔에 색상 적용
                 winston.format.timestamp({ format: customTimestampFormat }),
-                winston.format.simple()
+                winston.format.printf(({ level, message, timestamp }) => {
+                    const callerInfo = formatCallerInfo();
+                    return `${timestamp} [${level}] ${callerInfo} - ${message}`;
+                })
             )
         }),
         dailyRotateFileTransport

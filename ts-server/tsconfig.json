@@ -1,5 +1,8 @@
 {
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*",
+    "types/**/*.d.ts"
+  ],
   "compilerOptions": {
     "target": "es2016",                        // 지원하는 자바스크립트 버전 설정
     "module": "commonjs",                      // CommonJS 모듈 시스템을 사용 (node default setting)

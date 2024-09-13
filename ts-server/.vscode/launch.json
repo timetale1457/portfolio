@@ -17,6 +17,7 @@
             ],
             "cwd": "${workspaceRoot}",
             "internalConsoleOptions": "openOnSessionStart",
+            "console": "integratedTerminal",  
             "program": "${workspaceFolder}/src/main.ts", //프로그램 시작 경로
             "preLaunchTask": "tsc: build - tsconfig.json",
         }
