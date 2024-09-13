@@ -17,7 +17,7 @@ passport.deserializeUser((user: Express.User, done) => {
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID || '',
     clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
-    callbackURL: '/api/v1/test/google/callback'
+    callbackURL: '/api/v1/auth/google/callback'
   },
   (accessToken: string, refreshToken: string, profile: Profile, done: VerifyCallback) => {
     // 사용자 정보는 profile에 저장되어 있음
