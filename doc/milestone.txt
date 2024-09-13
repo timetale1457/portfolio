@@ -26,3 +26,4 @@
 4. Express User 타입과 passport Profile 타입의 호환을 위해 type 파일 추가.
 5. 정식 인증 router 생성
 6. Dock설정을 위해 프로젝트 폴더구조 구성
+7. 기본 프론트 소스 추가.
