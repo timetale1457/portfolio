@@ -1,4 +1,10 @@
 {
-    "login_id_placeholder": "email/id를 입력해주세요",
-    "login_pw_placeholder": "패스워드를 입력해주세요"
+    "login_id_placeholder": "메일 또는 아이디",
+    "login_pw_placeholder": "비밀번호",
+    "login_btn_content": "로그인",
+    "find_id": "아이디 찾기",
+    "find_password": "비밀번호 찾기",
+    "signup": "회원가입",
+    "keep_login": "로그인 유지",
+    "save_id": "아이디 저장"
 }

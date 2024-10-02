@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import logger from '../util/logger';
 import v1_router from './router_v1';
-import passport from './router_v1/auth/auth';
+import passport from './router_v1/auth/module/google';
 import session from 'express-session'; // express-session 모듈 추가
 
 const PORT = process.env.SRV_PORT || 3000;

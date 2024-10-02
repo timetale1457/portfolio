@@ -1,4 +1,11 @@
 {
     "login_id_placeholder": "Enter your id/email",
-    "login_pw_placeholder": "Enter password"
+    "login_pw_placeholder": "Enter password",
+    "login_btn_content": "Login",
+    "find_id": "Forgot your account?",
+    "find_password": "Forgot your password?",
+    "signup": "Create your account",
+    "keep_login": "Keep login",
+    "save_id": "Save id"
+
 }
