@@ -1,7 +1,0 @@
-1. 서버 인증키
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX6Unxt8DYWfyUOyUkORhN8Hxl25nlEOrcHX6L7FjjzgCd3nrtc+OqpkrgcOh7Gp6kbSJkNMYLQOJYyKchXgrgf3+WeLqqunaxdz2WIVQBgWpE9D+o3iJzIn3kBu8QJoDHJtKx8aiKfduGFQymoCmxzJ1/mUsLGGBWKdRgvJbaNb/Cr0D31QT5DaQ2pPZzU8bLypKryI1cEwL96NFWweCIrE89ZnF+27HnHcdNUyOWQ/xqJlkuDDpeslMCh37LLGoF5cRuPJvb1ZNxeoATE1lfUSofQTEe5lU7aN0xbBPxb1N9jRbBooFCowFYQThREBAX2eDSmjdRB1TuHYOWBsVD rsa-key-20220221
-
-2. 접속방법: 하기 인증키로 접속 (id: opc / pw: dpfwltjd)
--> private_key.ppk
-
-3. 서버 url: http://129.154.192.15:12239
