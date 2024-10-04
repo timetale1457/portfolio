@@ -1,135 +1,170 @@
-/* Login.css */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ebecf0;
+  overflow: hidden;
+}
+.container {
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;
+  position: absolute;
+  width: 768px;
+  min-height: 480px;
+  overflow: hidden;
+}
+form {
+  background: #ebecf0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+form input {
+  background: #eee;
+  padding: 16px;
+  margin: 8px 0;
+  width: 85%;
+  border: 0;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 7px 2px 10px #babebc, inset -5px -5px 12px #fff;
+}
+button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 15px 45px;
+  margin: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 80ms ease-in;
+}
+.form_btn {
+  box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+}
+.form_btn:active {
+  box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+}
+.overlay_btn {
+  background-color: #ff4b2b;
+  color: #fff;
+  box-shadow: -5px -5px 10px #ff6b3f, 5px 5px 8px #bf4b2b;
+}
+.sign-in-container {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.sign-up-container {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.overlay-left {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  background-color: #ff4b2b;
+  color: #fff;
+  transition: all 0.5s;
+}
+.overlay-right {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #ff4b2b;
+  color: #fff;
+  transition: all 0.5s;
+}
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 2;
+}
+.container.right-panel-active .overlay-right {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.container.right-panel-active .overlay-left {
+  transform: translateX(-100%);
+  opacity: 1;
+  z-index: 2;
+}
+.social-links {
+  margin: 20px 0;
+}
+form h1 {
+  font-weight: bold;
+  margin: 0;
+  color: #000;
 }
 
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+p {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
 }
-
-.login-box {
-    border: 2px solid #78afe9;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    width: 400px;
+span {
+  font-size: 12px;
+  color: #000;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
 }
-
-.login-box input {
-    font-size: 15px;
-    width: 100%;
-    padding: 10px;
-    height: 55px;
-    margin: 5px 0;
-    border: 2px solid #007bff;
-    border-radius: 5px;
+.social-links div {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  border-radius: 50%;
+  box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+  cursor: pointer;
 }
-
-.login-box button {
-    font-size: 15px;
-    width: 100%;
-    height: 55px;
-    padding: 10px;
-    margin: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.social-links a {
+  color: #000;
 }
-
-.login-box button:hover {
-    background-color: #0056b3;
-}
-
-.login-box text {
-    margin-top: 10px;
-    display: block;
-    color: #555;
-}
-
-.checkbox-group {
-    display: flex;
-    font-size: 12px;
-    gap: 10px;
-    align-self: flex-start;
-    margin: 10px 10px 20px 10px;
-    /* 체크박스 간 간격 조정 */
-}
-
-.checkbox-group input[type="checkbox"] {
-    display: none;
-    /* 기본 체크박스 숨기기 */
-}
-
-.checkbox-group label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    user-select: none;
-    /* 텍스트 드래그 방지 */
-    position: relative;
-    /* 체크박스 내에서 체크 표시 위치를 조정하기 위해 relative 설정 */
-}
-
-.checkbox-group label::before {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    background-color: white;
-    box-sizing: border-box;
-}
-
-.checkbox-group input[type="checkbox"]:checked+label::before {
-    background-color: white;
-    /* 배경색을 흰색으로 유지 */
-    border-color: #007bff;
-    /* 테두리 색상 유지 */
-}
-
-.checkbox-group input[type="checkbox"]:checked+label::after {
-    content: '✔';
-    /* 체크 표시 추가 */
-    display: block;
-    position: absolute;
-    top: -1px;
-    /* 체크 표시 위치 조정 */
-    left: 4px;
-    /* 체크 표시 위치 조정 */
-    font-size: 14px;
-    color: #007bff;
-    /* 체크 표시 색상 */
-}
-
-.login-links {
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.login-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #555;
-}
-
-.login-links span {
-    margin: 0 5px;
-    color: #555;
-}
-
-.login-links a:hover {
-    text-decoration: underline;
+.social-links div:active {
+  box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
 }
