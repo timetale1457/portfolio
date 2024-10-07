@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Login from './components/login/login';
+import Header from './components/header/header'
 import { changeLanguage } from 'i18next';
 
 const root = ReactDOM.createRoot(
@@ -8,8 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-     <button onClick={() => changeLanguage('en')}>English</button>
-     <button onClick={() => changeLanguage('ko')}>한국어</button>
+    <Header/>
     <Login />
   </React.StrictMode>
 );
