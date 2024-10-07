@@ -15,7 +15,7 @@ const Login: React.FC = () => {
   const signUpBtn = document.getElementById("signUp");
   const signInBtn = document.getElementById("signIn");
   const container = document.querySelector(".container");
-  
+
   useEffect(() => {
     const signUpBtn = document.getElementById("signUp");
     const signInBtn = document.getElementById("signIn");

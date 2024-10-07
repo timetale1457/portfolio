@@ -1,1 +1,46 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
+.language-toggle-container {
+    position: relative;
+    display: inline-block;
+}
+
+.language-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.language-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.language-menu.open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.language-option {
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.language-option:hover {
+    background-color: #f0f0f0;
+}
