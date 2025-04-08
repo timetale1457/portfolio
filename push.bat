@@ -14,7 +14,7 @@ IF "%msg%"=="" (
 )
 
 git commit -m "%msg%"
-git push origin main
+git push origin master
 
 echo.
 echo ✅ Push 완료!
